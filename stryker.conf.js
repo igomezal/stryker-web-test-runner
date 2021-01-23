@@ -8,5 +8,5 @@ module.exports = {
   },
   mutate: ['packages/**/*.js', '!packages/**/*.test.js'],
   packageManager: 'npm',
-  reporters: ['html', 'clear-text', 'progress', 'dashboard'],
+  reporters: ['html', 'clear-text', 'progress'],
 };
