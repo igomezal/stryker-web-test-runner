@@ -1,0 +1,23 @@
+{
+  "name": "stryker-web-test-runner",
+  "version": "1.0.0",
+  "description": "Example of stryker mutation test used together with web-test-runner",
+  "scripts": {
+    "test": "web-test-runner",
+    "test:watch": "web-test-runner --watch",
+    "test:mutation": "stryker run",
+    "test:no:coverage": "web-test-runner --config web-test-runner-stryker.config.mjs"
+  },
+  "author": "Ivan Gomez Alonso <yvangomezalonso@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.1.5",
+    "@open-wc/testing": "^2.5.32",
+    "@stryker-mutator/core": "^4.3.1",
+    "@stryker-mutator/mocha-runner": "^4.3.1",
+    "@web/test-runner": "^0.12.5"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  }
+}
