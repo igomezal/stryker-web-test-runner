@@ -54,3 +54,19 @@ export default {
     </html>`,
 }
 ```
+
+If you are using **Stryker version 5** you will need to update the previous script, now the `__STRYKER_ACTIVE_MUTANT__` and `activeMutant` need to be of type string so make sure to double o single quote the expression `${getCurrentMutant()}`.
+
+At the end the script which will be injected in the html page should look like this:
+
+```js
+  window.__stryker__ = window.__stryker__ || {};
+
+  window.__stryker__.activeMutant = '${getCurrentMutant()}'; // Single quotes to be sure it is a string so it works with Stryker version 5
+
+  window.process = {
+      env: {
+          __STRYKER_ACTIVE_MUTANT__: '${getCurrentMutant()}', // Single quotes to be sure it is a string so it works with Stryker version 5
+      }
+  }
+```
